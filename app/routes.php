@@ -11,7 +11,5 @@
 |
 */
 
-Route::get('/', function()
-{
-	return View::make('hello');
-});
+Route::get('/', 'UsersController@index');
+Route::get('/user', 'UsersController@show_profile');

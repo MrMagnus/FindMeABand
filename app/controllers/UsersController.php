@@ -1,6 +1,6 @@
 <?php
 
-class HomeController extends BaseController {
+class UsersController extends BaseController {
 
 	/*
 	|--------------------------------------------------------------------------
@@ -15,9 +15,24 @@ class HomeController extends BaseController {
 	|
 	*/
 
-	public function showWelcome()
-	{
-		return View::make('hello');
+	public function index(){
+		
+		if (View::exists('users.profile')){
+    	return 'den finns';
+		}
+
+		return 'nope';
 	}
+
+	/**
+	* Show the user profile.
+	*
+	*/
+	public function show_profile(){
+
+		return View::make('users.profile');
+	}
+
+
 
 }
