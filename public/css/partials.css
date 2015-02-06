@@ -1,0 +1,49 @@
+
+
+/*-------------------------Inputs-----------------------------------*/
+
+label{
+  display: block;
+  color: #423E35;
+  margin-bottom: 10px;
+}
+
+input{
+  display: block;
+  padding: 7px;
+  margin-bottom: 10px;
+  border: none;
+
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+
+} 
+/*-------------------------Button Styles----------------------------*/
+
+.button{
+  padding: 7px 10px;
+  margin-bottom: 10px;
+  font-size: 13px;
+  color: black;
+  text-align: center;
+  background: gray;
+  border: 1px solid #423E35;
+  cursor: pointer;
+
+}
+
+.button:hover{
+  background: black;
+}
+
+/* Primary button styles */
+.btn-primary{
+  background: #CCBDA2;
+  color: white;
+}
+
+.btn-primary:hover{
+  background: #ADA18A;
+}
+

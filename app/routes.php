@@ -11,5 +11,8 @@
 |
 */
 
-Route::get('/', 'UsersController@index');
-Route::get('/user', 'UsersController@show_profile');
+Route::get('/', ['as' => 'home', 'uses' =>'PagesController@index']);
+
+Route::get('/profile', ['before' => 'auth', 'as' => 'profile', 'uses' => 'UsersController@show_profile']);
+Route::post('/sessions/store', ['as' => 'sessions.store', 'uses' => 'SessionsController@store']);
+Route::get('/logout', ['as' => 'logout', 'uses' => 'SessionsController@destroy']);

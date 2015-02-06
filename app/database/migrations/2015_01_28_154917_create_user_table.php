@@ -17,7 +17,7 @@ class CreateUserTable extends Migration {
     	$table->increments('id');
 			$table->string('name');
 			$table->integer('birth_year');
-			$table->string('email');
+			$table->string('email')->unique();
 			$table->longText('description');
 			$table->string('residency');
 			$table->string('profile_image_url');

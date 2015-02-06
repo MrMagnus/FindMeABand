@@ -23,4 +23,14 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
 	 */
 	protected $hidden = array('password', 'remember_token');
 
+	
+	/**
+	* Get all the bands that belongs to a user
+	*/
+	public function bands(){
+    
+    return $this->belongsToMany('Band');
+
+  }
+
 }
