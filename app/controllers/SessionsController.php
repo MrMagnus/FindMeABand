@@ -3,18 +3,9 @@
 class SessionsController extends \BaseController {
 
 	/**
-	 * Show the form for creating a new resource.
-	 *
-	 * @return Response
-	 */
-	public function create()
-	{
-		
-	}
-
-
-	/**
-	 * Store a newly created resource in storage.
+	 * Creates a Auth session and redirect the user to its profile
+	 * if the user input is correct. Otherwise rediret the user to
+	 * the home page.
 	 *
 	 * @return Response
 	 */
@@ -29,7 +20,7 @@ class SessionsController extends \BaseController {
 									]);
 
 		if($attempt){
-			return Redirect::route('profile');
+			return Redirect::route('user_profile');
 		} else{
 			return Redirect::route('home');
 		}		
@@ -37,7 +28,7 @@ class SessionsController extends \BaseController {
 	}
 
 	/**
-	 * Remove the specified resource from storage.
+	 * Desroy the Auth session and redirects the user to the home page.
 	 *
 	 * @param  int  $id
 	 * @return Response

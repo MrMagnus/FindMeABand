@@ -78,7 +78,7 @@ display:block;
 		display:none;
 	}
 
-/*Clements with this class will be as wide as they possible can*/
+/*Elements with this class will be as wide as they possible can*/
 .w100{
   width: 100%;
 }

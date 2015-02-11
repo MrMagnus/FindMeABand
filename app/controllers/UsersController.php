@@ -17,10 +17,11 @@ class UsersController extends BaseController {
 	*/
 	public function show_profile(){
 
-		$users = User::all();
+		$user = User::whereId(Auth::id())->first();
 
-		return View::make('users.profile', compact('users'));
+		return View::make('users.profile', compact('user'));
 	}
+
 
 
 

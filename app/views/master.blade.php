@@ -11,22 +11,32 @@
   </head>
   
   <body>
-  
     <header>
+      
+      
       
       <div class="container">
         <nav class="row">
-          <div id="logo" class="bl2"><h2>FINDMEABAND!</h2></div>
-          <div id="nav-links" class="bl2">
-            <a href="#">HEM</a>
-            <a href="#">REGISTRERA DIG</a>
+          <div id="logo" class="col-2"><h2>FINDMEABAND!</h2></div>
+          <div id="nav-links" class="col-2">
+            
+            @if( Request::url() == route('home'))
+              <a href="{{route('home')}}">HEM</a>
+              <a href="#">REGISTRERA DIG</a>
+            @else
+              <a href="{{route('user_profile')}}">PROFIL</a>
+              <a href="#">BAND</a>
+              <a href="#">MATCHNINGAR</a>
+              <a href="{{route('logout')}}">LOGGA UT</a>
+            @endif
+
           </div>
         </nav>  
-      </div>
+      </div> <!-- CONTAINER COLLAPSE -->
 
     </header>
    
-    @yield('contentq')
+    @yield('content')
 
   </body>
 </html>
